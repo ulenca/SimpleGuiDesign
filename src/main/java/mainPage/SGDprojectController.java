@@ -17,6 +17,8 @@ import model.SGDproject;
 public class SGDprojectController implements Serializable{
 	
 	//String name = "pr56566";
+	SGDproject project;
+	int c=1;
 	
 	@ManagedProperty(value = "#{name}")
 	public String name;
@@ -29,10 +31,17 @@ public class SGDprojectController implements Serializable{
 		return name;
 	}
 	
+
 	public void newProject(){
+	
+		if(c==1){
+			project = new SGDproject(name);
+			System.out.println("nazwa="+ project.getName());
+			c=c+1;
+			}else{
+			System.out.println("obiekt juz utworzony"+ project.getName());
+		}
 		
-		SGDproject project = new SGDproject(name);
-		System.out.println("nazwa="+ project.getName());
 	}
 	
 	
