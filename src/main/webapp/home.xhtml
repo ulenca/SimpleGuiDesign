@@ -13,6 +13,14 @@
 </body>
 
 <h:form>
+ <h:outputLabel value = "ProjectName"/>
+ <h:inputText value ="#{SGDprojectController.name}"/>
+ <h:commandButton action="#{SGDprojectController.newProject}" value="Create project" />
+ 
+ BeanNameValue = #{SGDprojectController.name}
+</h:form>
+
+<h:form>
    <h3>Simple Gui Design Start Page</h3>
    <h:commandButton action="Page2" value="Page2" />
 </h:form>

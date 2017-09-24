@@ -6,6 +6,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 
+import model.SGDproject;
+
 @ManagedBean(name = "navigationController", eager = true)
 @RequestScoped
 public class NavigationController implements Serializable{

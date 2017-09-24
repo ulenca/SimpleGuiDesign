@@ -10,7 +10,7 @@ public class HelloWorld {
    }
 	
    public String getMessage() {
-      return "hipull!";
+      return "Simple GUI Design Project!";
    }
 }
 
