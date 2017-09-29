@@ -10,7 +10,7 @@ import model.SGDproject;
 
 @ManagedBean(name = "navigationController", eager = true)
 @RequestScoped
-public class NavigationController implements Serializable{
+public class OutdatedNavigationController implements Serializable{
 	
 	@ManagedProperty(value = "#{param.pageId}")
 	private String pageId ="Home";
