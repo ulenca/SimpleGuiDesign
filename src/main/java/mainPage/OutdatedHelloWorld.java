@@ -4,9 +4,9 @@ import javax.faces.bean.ManagedBean;
 
 
 @ManagedBean(name = "helloWorld", eager = true)
-public class HelloWorld {
-   public HelloWorld() {
-      System.out.println("strona startowa");
+public class OutdatedHelloWorld {
+   public OutdatedHelloWorld() {
+      System.out.println("strona startowa test");
    }
 	
    public String getMessage() {

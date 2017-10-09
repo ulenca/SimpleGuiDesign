@@ -8,10 +8,6 @@
    <title>SDG main page</title>
 </head>
 
-<body>
-#{helloWorld.getMessage()}
-</body>
-
 <h:form>
  <h:outputLabel value = "ProjectName"/>
  <h:inputText value ="#{SGDprojectController.name}"/>
@@ -21,32 +17,6 @@
 
 </h:form>
 
-<h:form>
-   <h3>Simple Gui Design Start Page</h3>
-   <h:commandButton action="Page2" value="Page2" />
-</h:form>
 
-
-<h:form> 
-   <h4> Using Managed Bean</h4>  
-   <h:commandButton action = "#{navigationController.openPage1()}" value = "Page1" /> 
-</h:form> 
-
-<h:form> 
-   <h4> test</h4>  
-   <h:commandButton action = "#{navigationController.test()}" value = "test" /> 
-</h:form> 
-
-<h:form>
-   <h:commandLink action = "#{navigationController.showPage}" value = "Page1">
-      <f:param name = "pageId" value = "1" />
-   </h:commandLink>
-   <h:commandLink action = "#{navigationController.showPage}" value = "Page2">
-      <f:param name = "pageId" value = "2" />
-   </h:commandLink>
-   <h:commandLink action = "#{navigationController.showPage}" value = "Home">
-      <f:param name = "pageId" value = "3" />
-   </h:commandLink>
-</h:form>
 
 </html>
