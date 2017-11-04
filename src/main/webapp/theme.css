@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+	background-color: #111;
+}
+
+nav {
+	display: block;
+	color: black;
+	text-align: left;
+	padding: 10px 2px;
+    background-color: #f4f4f4;
+}
+
+
+aside {
+	float: left;
+	width: 16%;
+	margin-top: 7px;
+	padding: 0;
+}
+
+.button {
+	background-color: #e7e7e7; /* Grey */
+	border: none;
+	color: black;
+	padding: 12px 27px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+    margin-left: 1px;
+}
+
+.button2 {
+	background-color: white;
+	color: black;
+	border: 2px solid #e7e7e7; /* Grey */
+	padding: 12px 27px;
+    margin-bottom: 1px;
+	text-align: center;
+	display: list-item;
+	font-size: 14px;
+	width: 100%;
+}
+
+.button3 {
+	background-color: #f9bda9; /* light red */
+	border: none;
+	color: black;
+	padding: 12px 27px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+    margin-left: 1px;
+    margin-right: 1px;
+    float:right;
+}
+
+
+article {
+    margin-top: 2px;
+    margin-left: 5px;
+    float: right;
+    padding: 5px;
+    overflow: scroll;
+    width: 82%;
+}
+
+section {
+    margin-top: 2px;
+    float: center;
+
+}
+
+.order-table-row {
+    border: 1px solid #e7e7e7;
+    min-width: 150px;
+    text-align: top;
+}
+
+.order-table-header {
+    border: 1px solid #e7e7e7;
+    min-width: 150px;
+}
+
+
+.order-table {
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+   <title>SDG main page</title>
+   <link rel="stylesheet" type="text/css" href="theme.css"></link>
+</head>
+
+<h:body>
+
+ <ul>
+  <li><a href="Harmonogram.xhtml">Harmonogram</a></li>
+  <li><a href="Konfiguracja.xhtml">Konfiguracja</a></li>
+</ul>
+
+	<nav>
+	  
+	   <h:commandButton action="#{SGDprojectController.newProject}" value="Nowa grupa atrybutów"
+		styleClass="button" /> 
+				 
+	</nav>
+	
+	<section class="section">
+	
+	<h:dataTable
+	styleClass="order-table"
+    headerClass="order-table-header"
+    rowClasses="order-table-row"
+	>
+
+		<h:column><f:facet name="header">Nazwa atrybutu</f:facet></h:column>	
+		<h:column> <f:facet name="header">Wartości atrybutu</f:facet> </h:column>
+		<h:column> <f:facet name="header">Edytuj wartości</f:facet> </h:column>
+		<h:column> <f:facet name="header">Usuń grupę</f:facet> </h:column>
+			
+	</h:dataTable>
+	
+	</section>
+
+</h:body>
+
+</html>

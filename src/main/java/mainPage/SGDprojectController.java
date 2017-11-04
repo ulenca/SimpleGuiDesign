@@ -35,7 +35,7 @@ public class SGDprojectController implements Serializable{
 	public void newProject(){
 	
 		if(c==1){
-			project = new SGDproject(name);
+			project = new SGDproject("cos");
 			System.out.println("nazwa="+ project.getName());
 			c=c+1;
 			}else{
