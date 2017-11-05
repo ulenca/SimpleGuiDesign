@@ -18,8 +18,40 @@
 
 	<nav>
 	  
-	   <h:commandButton action="#{SGDprojectController.newProject}" value="Nowa grupa atrybutów"
-		styleClass="button" /> 
+	   <button id ="myBtn" class="button"> Nowa grupa atrybutów </button> 
+	   
+		
+		<!-- The Modal -->
+		<div id="id01" class="modal">
+		
+
+		
+		  <div class="modal-content">
+		  
+		     <header class="modalHeader">
+             Grupa atrybutów
+             </header>		  
+		      <span class="close">&times;</span>
+		      <h:form>
+		      <p><label for = "nazwa" class = "label">Nazwa grupy atrybutów</label></p>
+		      <p><h:inputText id = "nazwa" styleClass="input"/></p>
+
+		      </h:form>
+		  		        <footer class="modal-footer">
+                <h:commandButton action="#{SGDprojectController.newProject}" value="Przerwij"
+		styleClass="button3" />
+		      <h:commandButton action="#{SGDprojectController.newProject}" value="Zapisz"
+		styleClass="button4" />
+                </footer>
+		  </div>
+
+		</div>
+			      
+        <script src ="js.js">
+
+
+</script>
+	   
 				 
 	</nav>
 	
