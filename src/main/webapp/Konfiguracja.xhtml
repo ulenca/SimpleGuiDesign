@@ -28,29 +28,32 @@
 		
 		  <div class="modal-content">
 		  
+		   <h:form>
 		     <header class="modalHeader">
              Grupa atrybutów
+         
              </header>		  
+             
 		      <span class="close">&times;</span>
-		      <h:form>
-		      <p><label for = "nazwa" class = "label">Nazwa grupy atrybutów</label></p>
-		      <p><h:inputText id = "nazwa" styleClass="input"/></p>
+		      
+		    
+		      	<p><label for = "nazwa" class = "label">Nazwa grupy atrybutów</label></p>
+		      	<p><h:inputText id = "nazwa" styleClass="input" value ="#{AtrybutController.name}"/></p>
 
-		      </h:form>
-		  		        <footer class="modal-footer">
-                <h:commandButton action="#{SGDprojectController.newProject}" value="Przerwij"
-		styleClass="button3" />
-		      <h:commandButton action="#{SGDprojectController.newProject}" value="Zapisz"
-		styleClass="button4" />
+		  		<footer class="modal-footer">
+
+               		 <h:commandButton action="#{SGDprojectController.newProject}" value="Przerwij"
+								styleClass="button3" />
+		     		 <h:commandButton action="#{AtrybutController.createNewAttributeGroup}" value="Zapisz"
+								styleClass="button4" />
+				
                 </footer>
-		  </div>
+		      </h:form>
+		</div>
 
 		</div>
 			      
-        <script src ="js.js">
-
-
-</script>
+        <script src ="js.js"></script>
 	   
 				 
 	</nav>
