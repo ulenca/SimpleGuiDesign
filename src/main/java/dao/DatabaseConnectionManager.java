@@ -28,11 +28,13 @@ public class DatabaseConnectionManager implements Serializable{
 	
 	    private void init()throws Exception{
 	        FacesContext fc = FacesContext.getCurrentInstance();
+	        System.out.println("pobieram parametry po³¹czenia");
 	        db_server   = fc.getExternalContext().getInitParameter("DB-SERVER");
 	        db_user     = fc.getExternalContext().getInitParameter("DB-USER");
 	        db_password = fc.getExternalContext().getInitParameter("DB-PASSWORD");
 	        db_driver   = fc.getExternalContext().getInitParameter("JDBC-DRIVER");
 	        Class.forName(db_driver);
+	        System.out.println("uda³o pobraæ siê parametry po³¹czenia");
 	    } 
 	    
 	    public Connection initConnection() throws Exception{

@@ -6,15 +6,22 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 
-import model.GrupaAtrybutow;
+import model.Users;
 
-@ManagedBean(name="AtrybutController", eager = true)
+@ManagedBean(name="UserController", eager = true)
 @RequestScoped
 public class AtrybutController implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
+	
 	@ManagedProperty(value = "#{name}")
 	private String name;
+	
+	@ManagedProperty(value = "#{familyName}")
+	private String familyName;
+	
+	@ManagedProperty(value = "#{login}")
+	private String login;
 	
 	public void setName(String name) {
 		this.name = name;
@@ -24,9 +31,25 @@ public class AtrybutController implements Serializable{
 		return name;
 	}
 	
-	public void createNewAttributeGroup(){
+	public void setFamilyName(String familyName) {
+		this.familyName = familyName;
+	}
+	
+	public String getFamilyName(){
+		return familyName;
+	}
+	
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	
+	public String getLogin(){
+		return login;
+	}
+	
+	public void createUser(){
 		
-		GrupaAtrybutow grupa = new GrupaAtrybutow(name);
+		Users user = new Users(name, familyName, login);
 		
 	}
 

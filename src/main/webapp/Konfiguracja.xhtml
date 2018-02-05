@@ -1,79 +1,97 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-   xmlns:h="http://java.sun.com/jsf/html"
-   xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
 
 <head>
-   <title>SDG main page</title>
-   <link rel="stylesheet" type="text/css" href="theme.css"></link>
+<title>SDG main page</title>
+<link rel="stylesheet" type="text/css" href="theme.css"></link>
 </head>
 
 <h:body>
 
- <ul>
-  <li><a href="Harmonogram.xhtml">Harmonogram</a></li>
-  <li><a href="Konfiguracja.xhtml">Konfiguracja</a></li>
-</ul>
+	<ul>
+		<li><a href="Zadania.xhtml">Zadania</a></li>
+	    <li><a href="Siec.xhtml">Sieć</a></li>
+		<li><a href="Konfiguracja.xhtml">Konfiguracja</a></li>
+	</ul>
 
 	<nav>
-	  
-	   <button id ="myBtn" class="button"> Nowa grupa atrybutów </button> 
-	   
-		
-		<!-- The Modal -->
-		<div id="id01" class="modal">
-		
 
-		
-		  <div class="modal-content">
-		  
-		   <h:form>
-		     <header class="modalHeader">
-             Grupa atrybutów
-         
-             </header>		  
-             
-		      <span class="close">&times;</span>
-		      
-		    
-		      	<p><label for = "nazwa" class = "label">Nazwa grupy atrybutów</label></p>
-		      	<p><h:inputText id = "nazwa" styleClass="input" value ="#{AtrybutController.name}"/></p>
+	<button id="myBtn" class="button">Nowy użytkownik</button>
 
-		  		<footer class="modal-footer">
 
-               		 <h:commandButton action="#{SGDprojectController.newProject}" value="Przerwij"
-								styleClass="button3" />
-		     		 <h:commandButton action="#{AtrybutController.createNewAttributeGroup}" value="Zapisz"
-								styleClass="button4" />
+	<!-- The Modal -->
+	<div id="id01" class="modal">
+
+
+
+		<div class="modal-content">
+
+			<h:form>
+				<header class="modalHeader"> Grupa atrybutów </header>
+
+				<span class="close">&times;</span>
+
+
+				<p>
+					<label for="imie" class="label">Imię</label>
+				</p>
+				<p>
+					<h:inputText id="imie" styleClass="input"
+						value="#{UserController.name}" />
+				</p>
 				
-                </footer>
-		      </h:form>
+				<p>
+					<label for="nazwisko" class="label">Nazwisko</label>
+				</p>
+				<p>
+					<h:inputText id="nazwisko" styleClass="input"
+						value="#{UserController.familyName}" />
+				</p>
+				
+				<p>
+					<label for="login" class="label">Login</label>
+				</p>
+				<p>
+					<h:inputText id="login" styleClass="input"
+						value="#{UserController.login}" />
+				</p>
+
+				<footer class="modal-footer"> <h:commandButton
+					action="#{SGDprojectController.newProject}" value="Przerwij"
+					styleClass="button3" /> <h:commandButton
+					action="#{UserController.createUser}"
+					value="Zapisz" styleClass="button4" /> </footer>
+			</h:form>
 		</div>
 
-		</div>
-			      
-        <script src ="js.js"></script>
-	   
-				 
-	</nav>
-	
-	<section class="section">
-	
-	<h:dataTable
-	styleClass="order-table"
-    headerClass="order-table-header"
-    rowClasses="order-table-row"
-	>
+	</div>
 
-		<h:column><f:facet name="header">Nazwa atrybutu</f:facet></h:column>	
-		<h:column> <f:facet name="header">Wartości atrybutu</f:facet> </h:column>
-		<h:column> <f:facet name="header">Edytuj wartości</f:facet> </h:column>
-		<h:column> <f:facet name="header">Usuń grupę</f:facet> </h:column>
-			
-	</h:dataTable>
-	
-	</section>
+	<script src="js.js"></script> </nav>
+
+	<section class="section"> <h:dataTable
+		styleClass="order-table" headerClass="order-table-header"
+		rowClasses="order-table-row">
+
+		<h:column>
+			<f:facet name="header">Imię</f:facet>
+		</h:column>
+		<h:column>
+			<f:facet name="header">Nazwisko</f:facet>
+		</h:column>
+		<h:column>
+			<f:facet name="header">login</f:facet>
+		</h:column>
+		<h:column>
+			<f:facet name="header">Edytuj</f:facet>
+		</h:column>
+		<h:column>
+			<f:facet name="header">Usuń</f:facet>
+		</h:column>
+
+	</h:dataTable> </section>
 
 </h:body>
 
