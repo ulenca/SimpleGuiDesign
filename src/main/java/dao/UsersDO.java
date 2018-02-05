@@ -18,12 +18,16 @@ public class UsersDO implements Serializable{
     private String login;
     private static String db_table = "users";
     
-    public UsersDO(String name, String familyName, String login){
+    public UsersDO(Users user){
         super();
-        this.setName(name);
-        this.setFamilyName(familyName);
-        this.setLogin(login);
+        this.setName(user.name);
+        this.setFamilyName(user.familyName);
+        this.setLogin(user.login);
         System.out.println("Utworzono obiekt DO");
+    }
+    
+    public UsersDO(){
+    	
     }
 
 	public int getId() {
@@ -58,7 +62,7 @@ public class UsersDO implements Serializable{
 		this.login = login;
 	}
 	
-	public void saveAttributeGroup() throws SQLException{
+	public void saveUser() throws SQLException{
 		
 		 PreparedStatement preState = null;
 		 DatabaseConnectionManager dbm;
@@ -92,8 +96,8 @@ public class UsersDO implements Serializable{
 	}
 	
 	
-	public List<Users> getListOfUsers () throws SQLException {
-		List<Users> list = new ArrayList<Users>();
+	public static ArrayList<Users> getListOfUsers () {
+		ArrayList<Users> list = new ArrayList<Users>();
 		
 		 PreparedStatement preState = null;
 		 DatabaseConnectionManager dbm;
@@ -111,10 +115,12 @@ public class UsersDO implements Serializable{
 	            resultSet  = preState.executeQuery();
 	            
 	            while (resultSet.next()) {
-	                list.add( new Users(resultSet.getString(2), resultSet.getString(3), resultSet.getString(4)) );                
+	                list.add( new Users(resultSet.getString(2), resultSet.getString(3), resultSet.getString(4)) ); 
+	                System.out.println("Uzytkownicy " + list.toString());
 	            }
 	            
 	        } catch (Exception e){
+	        	System.out.println("Wyst¹pi³ b³¹d pobierania listy");
 	        	e.printStackTrace();
 	        }finally{
 	        	if( preState != null )

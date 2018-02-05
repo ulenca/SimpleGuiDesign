@@ -12,15 +12,8 @@ public class Users {
 	
 	public Users(String name, String familyName, String login){
 		this.name = name;
+		this.familyName = familyName;
+		this.login = login;
 		System.out.println("utworzono uzytkownika " + name);
-		UsersDO gr = new UsersDO(name, familyName, login);
-		
-		try {
-			gr.saveAttributeGroup();
-		} catch (SQLException e) {
-			System.out.println("problem z zapisem do bazy");
-			e.printStackTrace();
-		}
 	}
-
 }
