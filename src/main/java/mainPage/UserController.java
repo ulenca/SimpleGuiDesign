@@ -28,8 +28,7 @@ public class UserController implements Serializable{
 	@ManagedProperty(value = "#{login}")
 	private String login;
 	
-	@ManagedProperty(value = "#{userList}")
-	ArrayList<Users> userList;
+
 	
 	
 	public void setName(String name) {
@@ -56,13 +55,7 @@ public class UserController implements Serializable{
 		return login;
 	}
 	
-	public void setUserList(ArrayList<Users> userList){
-		this.userList = userList;
-	}
-	
-	public ArrayList<Users> getUserList() {
-		return UsersDO.getListOfUsers();
-	}
+
 
 	
 	public void createUser(){

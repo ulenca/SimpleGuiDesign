@@ -20,7 +20,10 @@
 	<nav>
 
 	<button id="myBtn" class="button">Nowy użytkownik</button>
-
+	
+	<h:form>
+	<h:commandButton action="#{UserListController.getUserList2()}" styleClass="button" value = "Odśwież listę"/>
+    </h:form>
 
 	<!-- The Modal -->
 	<div id="id01" class="modal">
@@ -59,9 +62,11 @@
 						value="#{UserController.login}" />
 				</p>
 
-				<footer class="modal-footer"> <h:commandButton
+				<footer class="modal-footer">
+				 <h:commandButton
 					action="#{SGDprojectController.newProject}" value="Przerwij"
-					styleClass="button3" /> <h:commandButton
+					styleClass="button3" />
+				 <h:commandButton
 					action="#{UserController.createUser}"
 					value="Zapisz" styleClass="button4" /> </footer>
 			</h:form>
@@ -71,20 +76,32 @@
 
 	<script src="js.js"></script> </nav>
 
-	<section class="section"> 
-	<h:dataTable
 
+	<section class="section"> 
+	
+	<h:form>
+	<h:dataTable
+        value ="UserListController.userList" var="u"
 		styleClass="order-table" headerClass="order-table-header"
 		rowClasses="order-table-row">
 
 		<h:column>
-			<f:facet name="header">Imię</f:facet>
+			<f:facet name="header">
+			  Imię
+			  #{u.name}
+			</f:facet>
 		</h:column>
 		<h:column>
-			<f:facet name="header">Nazwisko</f:facet>
+			<f:facet name="header">
+			  Nazwisko
+			  #{u.familyName}
+			</f:facet>
 		</h:column>
 		<h:column>
-			<f:facet name="header">login</f:facet>
+			<f:facet name="header">
+			  Login
+			  #{u.login}
+			</f:facet>
 		</h:column>
 		<h:column>
 			<f:facet name="header">Edytuj</f:facet>
@@ -93,7 +110,9 @@
 			<f:facet name="header">Usuń</f:facet>
 		</h:column>
 
-	</h:dataTable> </section>
+	</h:dataTable>
+	</h:form>
+	 </section>
 
 </h:body>
 

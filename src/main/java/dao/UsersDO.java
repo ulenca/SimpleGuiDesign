@@ -17,6 +17,7 @@ public class UsersDO implements Serializable{
     private String familyName;
     private String login;
     private static String db_table = "users";
+    ArrayList<Users> list = new ArrayList<Users>();
     
     public UsersDO(Users user){
         super();
@@ -96,13 +97,14 @@ public class UsersDO implements Serializable{
 	}
 	
 	
-	public static ArrayList<Users> getListOfUsers () {
-		ArrayList<Users> list = new ArrayList<Users>();
+	public ArrayList<Users> getListOfUsers () {
+		
 		
 		 PreparedStatement preState = null;
 		 DatabaseConnectionManager dbm;
 		 ResultSet resultSet        = null;
 		 
+		 System.out.println("jestem w metodzie pobieraj¹cej liste userow");
 		 
 		try {
 			dbm = new DatabaseConnectionManager();
