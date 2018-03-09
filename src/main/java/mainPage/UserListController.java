@@ -5,10 +5,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
+import javax.faces.view.ViewScoped;
 
 import dao.UsersDO;
 import model.Users;
@@ -17,14 +19,14 @@ import model.Users;
 @RequestScoped
 public class UserListController implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 22344;
 
 	@ManagedProperty(value = "#{userList}")
 	ArrayList<Users> userList;
 	
 	UsersDO usersDO = new UsersDO();
 	
-	public String name, familyName, ligin;
+	private String name, familyName, ligin;
 	
 	public void setUserList(ArrayList<Users> userList){
 		this.userList = userList;

@@ -70,5 +70,11 @@ public class UserController implements Serializable{
 				e.printStackTrace();
 			}
 		}
+	
+	public void getUserList2() {
+		System.out.println("odœwie¿am listê...");
+		UsersDO usersDO = new UsersDO();
+		ArrayList<Users> users =  usersDO.getListOfUsers();
+	}
 		
 }
