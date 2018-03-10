@@ -21,19 +21,18 @@ public class UserListController implements Serializable {
 
 	private static final long serialVersionUID = 22344;
 
-	@ManagedProperty(value = "#{userList}")
-	ArrayList<Users> userList;
+	//@ManagedProperty(value = "#{userList}")
+	//private ArrayList<Users> userList;
 	
-	UsersDO usersDO = new UsersDO();
-	
-	private String name, familyName, ligin;
-	
+	//private String name, familyName;
+	/*
 	public void setUserList(ArrayList<Users> userList){
 		this.userList = userList;
 	}
 	
 	public ArrayList<Users> getUserList() {
-		return usersDO.getListOfUsers();
+		
+		return userList;
 	}
 	
 	public void setName(String name) {
@@ -42,7 +41,7 @@ public class UserListController implements Serializable {
 	
 	public String getName(){
 		return name;
-	}
+	} 
 	
 	public void setFamilyName(String familyName) {
 		this.familyName = familyName;
@@ -50,9 +49,10 @@ public class UserListController implements Serializable {
 	
 	public String getFamilyName(){
 		return familyName;
-	}
+	}*/
 	
 	public ArrayList<Users> getUserList2() {
+		UsersDO usersDO = new UsersDO();
 		System.out.println("odœwie¿am listê...");
 		return usersDO.getListOfUsers();
 	}
